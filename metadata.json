@@ -1,5 +1,5 @@
 {
-  "name": "Nova Chat",
+  "name": "Habijul Chat",
   "description": "A modern AI Chat website featuring multi-model selection (Text, Speech, Image Gen), file upload support, glassmorphism design, multilingual capabilities, and complete chat history.",
   "requestFramePermissions": [
     "microphone"

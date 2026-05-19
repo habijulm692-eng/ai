@@ -3,7 +3,8 @@ import path from 'path';
 import { createServer as createViteServer } from 'vite';
 import { GoogleGenAI } from '@google/genai';
 import multer from 'multer';
-import pdfParse from 'pdf-parse';
+import * as pdfParseModule from 'pdf-parse';
+const pdfParse = (pdfParseModule as any).default || pdfParseModule;
 import mammoth from 'mammoth';
 
 const upload = multer({ storage: multer.memoryStorage() });

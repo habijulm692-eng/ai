@@ -5,7 +5,8 @@ import { format } from 'date-fns';
 import { 
   Menu, X, Plus, MessageSquare, Search, Sun, Moon, 
   Languages, LogIn, LogOut, Send, Mic, Image as ImageIcon, 
-  Paperclip, Copy, Download, User as UserIcon, Check, Settings
+  Paperclip, Copy, Download, User as UserIcon, Check, Settings,
+  Volume2
 } from 'lucide-react';
 import Markdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
@@ -37,6 +38,7 @@ export default function App() {
   const [activeSessionId, setActiveSessionId] = useState<string | null>(null);
   const [input, setInput] = useState('');
   const [isGenerating, setIsGenerating] = useState(false);
+  const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   
   const [selectedModel, setSelectedModel] = useState<'gemini-3.1-pro-preview' | 'gemini-3-flash-preview' | 'gemini-3.1-flash-image-preview'>('gemini-3.1-pro-preview');
   
@@ -111,9 +113,14 @@ export default function App() {
     if (window.innerWidth < 768) setSidebarOpen(false);
   };
 
+  const handleClearFiles = () => {
+    setSelectedFiles([]);
+    if (fileInputRef.current) fileInputRef.current.value = '';
+  };
+
   const activeSession = sessions.find(s => s.id === activeSessionId) || sessions[0];
 
-  const handleSend = async (text: string, files?: FileList | null) => {
+  const handleSend = async (text: string, files?: File[]) => {
     if (!text.trim() && (!files || files.length === 0)) return;
     if (!activeSessionId) return;
 
@@ -234,7 +241,7 @@ export default function App() {
       setSessions(prev => prev.map(s => s.id === activeSessionId ? { ...s, messages: [...s.messages, errorMsg] } : s));
     } finally {
       setIsGenerating(false);
-      if (fileInputRef.current) fileInputRef.current.value = '';
+      handleClearFiles();
     }
   };
 
@@ -259,6 +266,17 @@ export default function App() {
 
   const copyToClipboard = (text: string) => {
     navigator.clipboard.writeText(text);
+  };
+
+  const handleSpeak = (text: string) => {
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = lang === 'en' ? 'en-US' : 'bn-BD';
+      window.speechSynthesis.speak(utterance);
+    } else {
+      alert('Text-to-speech is not supported in your browser.');
+    }
   };
 
   const downloadChat = () => {
@@ -289,7 +307,7 @@ export default function App() {
         sidebarOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"
       )}>
         <div className="p-4 flex items-center justify-between border-b border-gray-200 dark:border-gray-700/50">
-          <h1 className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Nova Chat</h1>
+          <h1 className="text-xl font-bold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent">Habijul Chat</h1>
           <button className="md:hidden p-1 rounded-md hover:bg-black/10 dark:hover:bg-white/10" onClick={() => setSidebarOpen(false)}>
             <X size={20} />
           </button>
@@ -454,13 +472,22 @@ export default function App() {
 
                       {/* Interactive Actions */}
                       {message.role === 'model' && message.text && (
-                        <button 
-                          onClick={() => copyToClipboard(message.text)}
-                          className="absolute -right-10 top-0 p-1.5 opacity-0 group-hover:opacity-100 transition-opacity rounded-md hover:bg-black/10 dark:hover:bg-white/10"
-                          title="Copy"
-                        >
-                          <Copy size={16} className="text-gray-500 dark:text-gray-400" />
-                        </button>
+                        <div className="absolute -right-12 top-0 flex flex-col gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
+                          <button 
+                            onClick={() => copyToClipboard(message.text)}
+                            className="p-1.5 rounded-md hover:bg-black/10 dark:hover:bg-white/10"
+                            title="Copy"
+                          >
+                            <Copy size={16} className="text-gray-500 dark:text-gray-400" />
+                          </button>
+                          <button 
+                            onClick={() => handleSpeak(message.text)}
+                            className="p-1.5 rounded-md hover:bg-black/10 dark:hover:bg-white/10"
+                            title="Listen"
+                          >
+                            <Volume2 size={16} className="text-gray-500 dark:text-gray-400" />
+                          </button>
+                        </div>
                       )}
                     </div>
                   </motion.div>
@@ -496,6 +523,11 @@ export default function App() {
                   className="hidden"
                   id="file-upload"
                   multiple
+                  onChange={(e) => {
+                    if (e.target.files) {
+                      setSelectedFiles(Array.from(e.target.files));
+                    }
+                  }}
                 />
                 <button 
                   type="button"
@@ -521,7 +553,7 @@ export default function App() {
                 onKeyDown={(e) => {
                   if (e.key === 'Enter' && !e.shiftKey) {
                     e.preventDefault();
-                    handleSend(input, fileInputRef.current?.files);
+                    handleSend(input, selectedFiles);
                   }
                 }}
                 placeholder={t.typeMessage}
@@ -531,8 +563,8 @@ export default function App() {
               />
               
               <button 
-                onClick={() => handleSend(input, fileInputRef.current?.files)}
-                disabled={(!input.trim() && !fileInputRef.current?.files?.length) || isGenerating}
+                onClick={() => handleSend(input, selectedFiles)}
+                disabled={(!input.trim() && selectedFiles.length === 0) || isGenerating}
                 className="mb-1.5 mr-1.5 p-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 disabled:opacity-50 disabled:hover:bg-blue-600 text-white transition-colors shadow-sm flex-shrink-0"
               >
                 <Send size={18} />
@@ -541,17 +573,38 @@ export default function App() {
             </div>
             
             {/* Show attached files quick view */}
-            {fileInputRef.current?.files && fileInputRef.current.files.length > 0 && (
-              <div className="mt-2 flex gap-2">
-                <span className="text-xs bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300 px-2 py-1 rounded-md">
-                  {fileInputRef.current.files.length} file(s) attached
-                </span>
-                <button onClick={() => { if(fileInputRef.current) fileInputRef.current.value=''; setInput(input); }} className="text-xs text-red-500 hover:underline">Clear</button>
+            {selectedFiles.length > 0 && (
+              <div className="mt-3 flex flex-wrap gap-2">
+                {selectedFiles.map((file, idx) => (
+                  <div key={idx} className="flex items-center gap-1.5 text-xs bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300 px-3 py-1.5 rounded-lg border border-blue-200 dark:border-blue-800">
+                    <Paperclip size={14} className="shrink-0" />
+                    <span className="truncate max-w-[150px] font-medium">{file.name}</span>
+                    <button 
+                      onClick={() => {
+                        const newFiles = [...selectedFiles];
+                        newFiles.splice(idx, 1);
+                        setSelectedFiles(newFiles);
+                        if (fileInputRef.current) {
+                          // Note: technically we can't easily resync the native input files list in this simple way, 
+                          // but the user's selectedFiles array is what we send.
+                          if (newFiles.length === 0) fileInputRef.current.value = '';
+                        }
+                      }}
+                      className="ml-1 text-blue-500 hover:text-red-500 transition-colors"
+                      title="Remove file"
+                    >
+                      <X size={14} />
+                    </button>
+                  </div>
+                ))}
+                <button onClick={handleClearFiles} className="text-xs text-red-500 hover:underline px-2 py-1.5 font-medium flex items-center">
+                  Clear all
+                </button>
               </div>
             )}
             
             <p className="text-center text-xs text-gray-400 mt-2">
-              Nova Chat can make mistakes. Consider verifying important information.
+              Habijul Chat can make mistakes. Consider verifying important information.
             </p>
           </div>
         </div>
