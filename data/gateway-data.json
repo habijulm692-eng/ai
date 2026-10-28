@@ -1,0 +1,2399 @@
+{
+  "settings": {
+    "masterApiKey": "gw-sk-master-live-2026",
+    "firebaseUrl": "",
+    "firebaseSecret": "",
+    "cacheTtlSeconds": 60,
+    "fallbackEnabled": true,
+    "maxRetries": 3,
+    "requestTimeoutMs": 30000
+  },
+  "providers": {
+    "google-ai-studio": {
+      "id": "google-ai-studio",
+      "name": "Google AI Studio",
+      "baseUrl": "https://generativelanguage.googleapis.com/v1beta",
+      "apiKey": "AQ.Ab8RN6LRKNFD07nMakY8HjY0UBuZYi05vMzfm92zSFuHEdSE6Q",
+      "protocol": "gemini-native",
+      "enabled": true,
+      "customHeaders": {},
+      "models": [
+        {
+          "id": "gemini-3.1-flash-lite",
+          "name": "gemini-3.1-flash-lite",
+          "enabled": true,
+          "priority": 1,
+          "contextWindow": 128000,
+          "notes": ""
+        }
+      ],
+      "createdAt": 1792684082296,
+      "updatedAt": 1793187416744
+    },
+    "groq": {
+      "id": "groq",
+      "name": "Groq Cloud",
+      "enabled": true,
+      "protocol": "openai-compatible",
+      "baseUrl": "https://api.groq.com/openai/v1",
+      "apiKey": "",
+      "customHeaders": {},
+      "createdAt": 1792684082296,
+      "updatedAt": 1792684082296,
+      "models": [
+        {
+          "id": "llama-3.3-70b-versatile",
+          "name": "Llama 3.3 70B Versatile",
+          "enabled": true,
+          "priority": 1,
+          "contextWindow": 128000,
+          "notes": "Near-instant 300+ tokens/sec inference",
+          "pipelineOrder": 1,
+          "inAllModelsPool": true
+        },
+        {
+          "id": "llama-3.1-8b-instant",
+          "name": "Llama 3.1 8B Instant",
+          "enabled": true,
+          "priority": 2,
+          "contextWindow": 128000,
+          "notes": "Ultra-lightweight fallback"
+        }
+      ]
+    },
+    "openrouter": {
+      "id": "openrouter",
+      "name": "OpenRouter",
+      "enabled": true,
+      "protocol": "openai-compatible",
+      "baseUrl": "https://openrouter.ai/api/v1",
+      "apiKey": "",
+      "customHeaders": {
+        "HTTP-Referer": "https://gateway.ai",
+        "X-Title": "Unified AI Gateway"
+      },
+      "createdAt": 1792684082296,
+      "updatedAt": 1792684082296,
+      "models": [
+        {
+          "id": "meta-llama/llama-3.2-3b-instruct:free",
+          "name": "Llama 3.2 3B Instruct (Free)",
+          "enabled": true,
+          "priority": 1,
+          "contextWindow": 131072,
+          "notes": "Zero-cost emergency fallback"
+        },
+        {
+          "id": "google/gemini-2.0-flash-exp:free",
+          "name": "Gemini 2.0 Flash Exp (Free)",
+          "enabled": true,
+          "priority": 2,
+          "contextWindow": 1048576,
+          "notes": "Free-tier experimental model"
+        }
+      ]
+    },
+    "xkiro": {
+      "id": "xkiro",
+      "name": "xKiro / Kilo",
+      "enabled": true,
+      "protocol": "openai-compatible",
+      "baseUrl": "https://api.kilo.ai/v1",
+      "apiKey": "",
+      "customHeaders": {},
+      "createdAt": 1792684082296,
+      "updatedAt": 1792684082296,
+      "models": [
+        {
+          "id": "kilo-deepseek-v3",
+          "name": "DeepSeek V3 (Kilo)",
+          "enabled": true,
+          "priority": 1,
+          "contextWindow": 64000,
+          "notes": "OpenAI-compatible standard gateway"
+        },
+        {
+          "id": "kilo-llama-3.3",
+          "name": "Llama 3.3 (Kilo)",
+          "enabled": true,
+          "priority": 2,
+          "contextWindow": 128000,
+          "notes": "High throughput backup"
+        }
+      ]
+    }
+  },
+  "clientKeys": {
+    "key-prod-default": {
+      "id": "key-prod-default",
+      "name": "Default Production App",
+      "key": "gw-client-prod-9a7c",
+      "enabled": true,
+      "createdAt": 1792977776554,
+      "totalRequests": 0,
+      "totalPromptTokens": 0,
+      "totalCompletionTokens": 0,
+      "totalTokens": 0
+    },
+    "key-dev-sandbox": {
+      "id": "key-dev-sandbox",
+      "name": "Staging & Sandbox Key",
+      "key": "gw-client-dev-4f81",
+      "enabled": true,
+      "createdAt": 1792977776554,
+      "totalRequests": 0,
+      "totalPromptTokens": 0,
+      "totalCompletionTokens": 0,
+      "totalTokens": 0
+    },
+    "key-mvokqg2p-fq9k": {
+      "id": "key-mvokqg2p-fq9k",
+      "name": "Customer Mobile App",
+      "key": "gw-client-0c5c38832cfebcf64e7afd6e",
+      "enabled": true,
+      "createdAt": 1792977876961,
+      "totalRequests": 0,
+      "totalPromptTokens": 0,
+      "totalCompletionTokens": 0,
+      "totalTokens": 0
+    }
+  },
+  "logs": {
+    "log-1792684089594-mjeky": {
+      "id": "log-1792684089594-mjeky",
+      "timestamp": 1792684090647,
+      "providerId": "google-ai-studio",
+      "providerName": "Google AI Studio",
+      "model": "gemini-2.5-flash",
+      "status": "success",
+      "statusCode": 200,
+      "latencyMs": 1053,
+      "wasFallback": false,
+      "originalModelRequested": "gemini-2.5-flash",
+      "stream": false,
+      "promptTokens": 9,
+      "completionTokens": 1,
+      "totalTokens": 10,
+      "userAgent": "curl/7.88.1"
+    },
+    "log-1792684118897-y9u6j": {
+      "id": "log-1792684118897-y9u6j",
+      "timestamp": 1792684119920,
+      "providerId": "google-ai-studio",
+      "providerName": "Google AI Studio",
+      "model": "gemini-2.5-flash",
+      "status": "success",
+      "statusCode": 200,
+      "latencyMs": 1023,
+      "wasFallback": false,
+      "originalModelRequested": "gemini-2.5-flash",
+      "stream": true,
+      "completionTokens": 2,
+      "userAgent": "curl/7.88.1"
+    },
+    "log-1792977535190-qh8cu": {
+      "id": "log-1792977535190-qh8cu",
+      "timestamp": 1792977535266,
+      "providerId": "xkiro",
+      "providerName": "xKiro / Kilo",
+      "model": "kilo-deepseek-v3",
+      "status": "failure",
+      "statusCode": 404,
+      "latencyMs": 76,
+      "errorMessage": "Upstream error 404: <!DOCTYPE html><html data-dpl-id=\"dpl_FXpxT9KMM6QJJquSejAfoXtHAsTq\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm",
+      "wasFallback": false,
+      "originalModelRequested": "kilo-deepseek-v3",
+      "stream": true,
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36"
+    },
+    "log-1792977535623-gesds": {
+      "id": "log-1792977535623-gesds",
+      "timestamp": 1792977535654,
+      "providerId": "google-ai-studio",
+      "providerName": "Google AI Studio",
+      "model": "gemini-2.5-flash",
+      "status": "failure",
+      "statusCode": 401,
+      "latencyMs": 31,
+      "errorMessage": "Gemini Error 401: {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"ACCESS_TOKEN_TYPE_UNSUPPORTED\",\n        \"metadata\": {\n          ",
+      "wasFallback": false,
+      "originalModelRequested": "gemini-2.5-flash",
+      "stream": true,
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36"
+    },
+    "log-1792977535619-xdd7s": {
+      "id": "log-1792977535619-xdd7s",
+      "timestamp": 1792977535715,
+      "providerId": "groq",
+      "providerName": "Groq Cloud",
+      "model": "llama-3.3-70b-versatile",
+      "status": "failure",
+      "statusCode": 401,
+      "latencyMs": 96,
+      "errorMessage": "Upstream error 401: {\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n",
+      "wasFallback": false,
+      "originalModelRequested": "llama-3.3-70b-versatile",
+      "stream": true,
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36"
+    },
+    "log-1792977535732-35q0j": {
+      "id": "log-1792977535732-35q0j",
+      "timestamp": 1792977535750,
+      "providerId": "google-ai-studio",
+      "providerName": "Google AI Studio",
+      "model": "gemini-2.5-pro",
+      "status": "failure",
+      "statusCode": 401,
+      "latencyMs": 18,
+      "errorMessage": "Gemini Error 401: {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"ACCESS_TOKEN_TYPE_UNSUPPORTED\",\n        \"metadata\": {\n          ",
+      "wasFallback": false,
+      "originalModelRequested": "gemini-2.5-pro",
+      "stream": true,
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36"
+    },
+    "log-1792977536449-otaa3": {
+      "id": "log-1792977536449-otaa3",
+      "timestamp": 1792977536483,
+      "providerId": "xkiro",
+      "providerName": "xKiro / Kilo",
+      "model": "kilo-llama-3.3",
+      "status": "failure",
+      "statusCode": 404,
+      "latencyMs": 34,
+      "errorMessage": "Upstream error 404: <!DOCTYPE html><html data-dpl-id=\"dpl_FXpxT9KMM6QJJquSejAfoXtHAsTq\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm",
+      "wasFallback": false,
+      "originalModelRequested": "kilo-llama-3.3",
+      "stream": true,
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36"
+    },
+    "log-1792977536585-j8vog": {
+      "id": "log-1792977536585-j8vog",
+      "timestamp": 1792977536601,
+      "providerId": "google-ai-studio",
+      "providerName": "Google AI Studio",
+      "model": "gemini-1.5-flash",
+      "status": "failure",
+      "statusCode": 401,
+      "latencyMs": 15,
+      "errorMessage": "Gemini Error 401: {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"ACCESS_TOKEN_TYPE_UNSUPPORTED\",\n        \"metadata\": {\n          ",
+      "wasFallback": false,
+      "originalModelRequested": "gemini-1.5-flash",
+      "stream": true,
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36"
+    },
+    "log-1792977536558-hceqo": {
+      "id": "log-1792977536558-hceqo",
+      "timestamp": 1792977536635,
+      "providerId": "groq",
+      "providerName": "Groq Cloud",
+      "model": "llama-3.1-8b-instant",
+      "status": "failure",
+      "statusCode": 401,
+      "latencyMs": 77,
+      "errorMessage": "Upstream error 401: {\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n",
+      "wasFallback": false,
+      "originalModelRequested": "llama-3.1-8b-instant",
+      "stream": true,
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36"
+    },
+    "log-1792977536713-xz5ap": {
+      "id": "log-1792977536713-xz5ap",
+      "timestamp": 1792977536741,
+      "providerId": "openrouter",
+      "providerName": "OpenRouter",
+      "model": "google/gemini-2.0-flash-exp:free",
+      "status": "failure",
+      "statusCode": 401,
+      "latencyMs": 28,
+      "errorMessage": "Upstream error 401: {\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}",
+      "wasFallback": false,
+      "originalModelRequested": "google/gemini-2.0-flash-exp:free",
+      "stream": true,
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36"
+    },
+    "log-1792977536707-iydzc": {
+      "id": "log-1792977536707-iydzc",
+      "timestamp": 1792977536757,
+      "providerId": "openrouter",
+      "providerName": "OpenRouter",
+      "model": "meta-llama/llama-3.2-3b-instruct:free",
+      "status": "failure",
+      "statusCode": 401,
+      "latencyMs": 50,
+      "errorMessage": "Upstream error 401: {\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}",
+      "wasFallback": false,
+      "originalModelRequested": "meta-llama/llama-3.2-3b-instruct:free",
+      "stream": true,
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36"
+    },
+    "log-1792977609876-vloxp": {
+      "id": "log-1792977609876-vloxp",
+      "timestamp": 1792977609904,
+      "providerId": "google-ai-studio",
+      "providerName": "Google AI Studio",
+      "model": "gemini-2.5-flash",
+      "status": "failure",
+      "statusCode": 401,
+      "latencyMs": 28,
+      "errorMessage": "Gemini Error 401: {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"ACCESS_TOKEN_TYPE_UNSUPPORTED\",\n        \"metadata\": {\n          ",
+      "wasFallback": false,
+      "stream": true,
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36"
+    },
+    "log-1792977796741-oiwtp": {
+      "id": "log-1792977796741-oiwtp",
+      "timestamp": 1792977796799,
+      "providerId": "google-ai-studio",
+      "providerName": "Google AI Studio",
+      "model": "gemini-2.5-flash",
+      "status": "failure",
+      "statusCode": 401,
+      "latencyMs": 58,
+      "errorMessage": "Gemini Error 401: {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"ACCESS_TOKEN_TYPE_UNSUPPORTED\",\n        \"metadata\": {\n          ",
+      "wasFallback": false,
+      "originalModelRequested": "all-models",
+      "stream": false,
+      "userAgent": "curl/7.88.1",
+      "apiKeyId": "key-prod-default",
+      "apiKeyName": "Default Production App",
+      "fallbackChain": [
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-2.5-flash",
+          "status": 401,
+          "latencyMs": 58,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"ACCESS_TOKEN_TYPE_UNSUPPORTED\",\n        \"metadata\": {\n          "
+        }
+      ]
+    },
+    "log-1792977796799-5kg76": {
+      "id": "log-1792977796799-5kg76",
+      "timestamp": 1792977796898,
+      "providerId": "groq",
+      "providerName": "Groq Cloud",
+      "model": "llama-3.3-70b-versatile",
+      "status": "failure",
+      "statusCode": 401,
+      "latencyMs": 99,
+      "errorMessage": "Upstream error 401: {\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n",
+      "wasFallback": true,
+      "originalModelRequested": "all-models",
+      "stream": false,
+      "userAgent": "curl/7.88.1",
+      "apiKeyId": "key-prod-default",
+      "apiKeyName": "Default Production App",
+      "fallbackChain": [
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-2.5-flash",
+          "status": 401,
+          "latencyMs": 58,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"ACCESS_TOKEN_TYPE_UNSUPPORTED\",\n        \"metadata\": {\n          "
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.3-70b-versatile",
+          "status": 401,
+          "latencyMs": 99,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        }
+      ]
+    },
+    "log-1792977796898-tx5er": {
+      "id": "log-1792977796898-tx5er",
+      "timestamp": 1792977796925,
+      "providerId": "openrouter",
+      "providerName": "OpenRouter",
+      "model": "meta-llama/llama-3.2-3b-instruct:free",
+      "status": "failure",
+      "statusCode": 401,
+      "latencyMs": 27,
+      "errorMessage": "Upstream error 401: {\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}",
+      "wasFallback": true,
+      "originalModelRequested": "all-models",
+      "stream": false,
+      "userAgent": "curl/7.88.1",
+      "apiKeyId": "key-prod-default",
+      "apiKeyName": "Default Production App",
+      "fallbackChain": [
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-2.5-flash",
+          "status": 401,
+          "latencyMs": 58,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"ACCESS_TOKEN_TYPE_UNSUPPORTED\",\n        \"metadata\": {\n          "
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.3-70b-versatile",
+          "status": 401,
+          "latencyMs": 99,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "meta-llama/llama-3.2-3b-instruct:free",
+          "status": 401,
+          "latencyMs": 27,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        }
+      ]
+    },
+    "log-1792977796926-bxcfi": {
+      "id": "log-1792977796926-bxcfi",
+      "timestamp": 1792977796966,
+      "providerId": "xkiro",
+      "providerName": "xKiro / Kilo",
+      "model": "kilo-deepseek-v3",
+      "status": "failure",
+      "statusCode": 404,
+      "latencyMs": 40,
+      "errorMessage": "Upstream error 404: <!DOCTYPE html><html data-dpl-id=\"dpl_FXpxT9KMM6QJJquSejAfoXtHAsTq\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm",
+      "wasFallback": true,
+      "originalModelRequested": "all-models",
+      "stream": false,
+      "userAgent": "curl/7.88.1",
+      "apiKeyId": "key-prod-default",
+      "apiKeyName": "Default Production App",
+      "fallbackChain": [
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-2.5-flash",
+          "status": 401,
+          "latencyMs": 58,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"ACCESS_TOKEN_TYPE_UNSUPPORTED\",\n        \"metadata\": {\n          "
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.3-70b-versatile",
+          "status": 401,
+          "latencyMs": 99,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "meta-llama/llama-3.2-3b-instruct:free",
+          "status": 401,
+          "latencyMs": 27,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        },
+        {
+          "providerId": "xkiro",
+          "providerName": "xKiro / Kilo",
+          "modelId": "kilo-deepseek-v3",
+          "status": 404,
+          "latencyMs": 40,
+          "error": "<!DOCTYPE html><html data-dpl-id=\"dpl_FXpxT9KMM6QJJquSejAfoXtHAsTq\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm"
+        }
+      ]
+    },
+    "log-1792977796966-2a0kz": {
+      "id": "log-1792977796966-2a0kz",
+      "timestamp": 1792977796984,
+      "providerId": "google-ai-studio",
+      "providerName": "Google AI Studio",
+      "model": "gemini-1.5-flash",
+      "status": "failure",
+      "statusCode": 401,
+      "latencyMs": 18,
+      "errorMessage": "Gemini Error 401: {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"ACCESS_TOKEN_TYPE_UNSUPPORTED\",\n        \"metadata\": {\n          ",
+      "wasFallback": true,
+      "originalModelRequested": "all-models",
+      "stream": false,
+      "userAgent": "curl/7.88.1",
+      "apiKeyId": "key-prod-default",
+      "apiKeyName": "Default Production App",
+      "fallbackChain": [
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-2.5-flash",
+          "status": 401,
+          "latencyMs": 58,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"ACCESS_TOKEN_TYPE_UNSUPPORTED\",\n        \"metadata\": {\n          "
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.3-70b-versatile",
+          "status": 401,
+          "latencyMs": 99,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "meta-llama/llama-3.2-3b-instruct:free",
+          "status": 401,
+          "latencyMs": 27,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        },
+        {
+          "providerId": "xkiro",
+          "providerName": "xKiro / Kilo",
+          "modelId": "kilo-deepseek-v3",
+          "status": 404,
+          "latencyMs": 40,
+          "error": "<!DOCTYPE html><html data-dpl-id=\"dpl_FXpxT9KMM6QJJquSejAfoXtHAsTq\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm"
+        },
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-1.5-flash",
+          "status": 401,
+          "latencyMs": 18,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"ACCESS_TOKEN_TYPE_UNSUPPORTED\",\n        \"metadata\": {\n          "
+        }
+      ]
+    },
+    "log-1792977796984-cpmjc": {
+      "id": "log-1792977796984-cpmjc",
+      "timestamp": 1792977797056,
+      "providerId": "groq",
+      "providerName": "Groq Cloud",
+      "model": "llama-3.1-8b-instant",
+      "status": "failure",
+      "statusCode": 401,
+      "latencyMs": 72,
+      "errorMessage": "Upstream error 401: {\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n",
+      "wasFallback": true,
+      "originalModelRequested": "all-models",
+      "stream": false,
+      "userAgent": "curl/7.88.1",
+      "apiKeyId": "key-prod-default",
+      "apiKeyName": "Default Production App",
+      "fallbackChain": [
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-2.5-flash",
+          "status": 401,
+          "latencyMs": 58,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"ACCESS_TOKEN_TYPE_UNSUPPORTED\",\n        \"metadata\": {\n          "
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.3-70b-versatile",
+          "status": 401,
+          "latencyMs": 99,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "meta-llama/llama-3.2-3b-instruct:free",
+          "status": 401,
+          "latencyMs": 27,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        },
+        {
+          "providerId": "xkiro",
+          "providerName": "xKiro / Kilo",
+          "modelId": "kilo-deepseek-v3",
+          "status": 404,
+          "latencyMs": 40,
+          "error": "<!DOCTYPE html><html data-dpl-id=\"dpl_FXpxT9KMM6QJJquSejAfoXtHAsTq\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm"
+        },
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-1.5-flash",
+          "status": 401,
+          "latencyMs": 18,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"ACCESS_TOKEN_TYPE_UNSUPPORTED\",\n        \"metadata\": {\n          "
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.1-8b-instant",
+          "status": 401,
+          "latencyMs": 72,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        }
+      ]
+    },
+    "log-1792977797056-76mq5": {
+      "id": "log-1792977797056-76mq5",
+      "timestamp": 1792977797071,
+      "providerId": "openrouter",
+      "providerName": "OpenRouter",
+      "model": "google/gemini-2.0-flash-exp:free",
+      "status": "failure",
+      "statusCode": 401,
+      "latencyMs": 15,
+      "errorMessage": "Upstream error 401: {\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}",
+      "wasFallback": true,
+      "originalModelRequested": "all-models",
+      "stream": false,
+      "userAgent": "curl/7.88.1",
+      "apiKeyId": "key-prod-default",
+      "apiKeyName": "Default Production App",
+      "fallbackChain": [
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-2.5-flash",
+          "status": 401,
+          "latencyMs": 58,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"ACCESS_TOKEN_TYPE_UNSUPPORTED\",\n        \"metadata\": {\n          "
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.3-70b-versatile",
+          "status": 401,
+          "latencyMs": 99,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "meta-llama/llama-3.2-3b-instruct:free",
+          "status": 401,
+          "latencyMs": 27,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        },
+        {
+          "providerId": "xkiro",
+          "providerName": "xKiro / Kilo",
+          "modelId": "kilo-deepseek-v3",
+          "status": 404,
+          "latencyMs": 40,
+          "error": "<!DOCTYPE html><html data-dpl-id=\"dpl_FXpxT9KMM6QJJquSejAfoXtHAsTq\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm"
+        },
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-1.5-flash",
+          "status": 401,
+          "latencyMs": 18,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"ACCESS_TOKEN_TYPE_UNSUPPORTED\",\n        \"metadata\": {\n          "
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.1-8b-instant",
+          "status": 401,
+          "latencyMs": 72,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "google/gemini-2.0-flash-exp:free",
+          "status": 401,
+          "latencyMs": 15,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        }
+      ]
+    },
+    "log-1792977797071-hxhlj": {
+      "id": "log-1792977797071-hxhlj",
+      "timestamp": 1792977797099,
+      "providerId": "xkiro",
+      "providerName": "xKiro / Kilo",
+      "model": "kilo-llama-3.3",
+      "status": "failure",
+      "statusCode": 404,
+      "latencyMs": 28,
+      "errorMessage": "Upstream error 404: <!DOCTYPE html><html data-dpl-id=\"dpl_FXpxT9KMM6QJJquSejAfoXtHAsTq\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm",
+      "wasFallback": true,
+      "originalModelRequested": "all-models",
+      "stream": false,
+      "userAgent": "curl/7.88.1",
+      "apiKeyId": "key-prod-default",
+      "apiKeyName": "Default Production App",
+      "fallbackChain": [
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-2.5-flash",
+          "status": 401,
+          "latencyMs": 58,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"ACCESS_TOKEN_TYPE_UNSUPPORTED\",\n        \"metadata\": {\n          "
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.3-70b-versatile",
+          "status": 401,
+          "latencyMs": 99,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "meta-llama/llama-3.2-3b-instruct:free",
+          "status": 401,
+          "latencyMs": 27,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        },
+        {
+          "providerId": "xkiro",
+          "providerName": "xKiro / Kilo",
+          "modelId": "kilo-deepseek-v3",
+          "status": 404,
+          "latencyMs": 40,
+          "error": "<!DOCTYPE html><html data-dpl-id=\"dpl_FXpxT9KMM6QJJquSejAfoXtHAsTq\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm"
+        },
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-1.5-flash",
+          "status": 401,
+          "latencyMs": 18,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"ACCESS_TOKEN_TYPE_UNSUPPORTED\",\n        \"metadata\": {\n          "
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.1-8b-instant",
+          "status": 401,
+          "latencyMs": 72,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "google/gemini-2.0-flash-exp:free",
+          "status": 401,
+          "latencyMs": 15,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        },
+        {
+          "providerId": "xkiro",
+          "providerName": "xKiro / Kilo",
+          "modelId": "kilo-llama-3.3",
+          "status": 404,
+          "latencyMs": 28,
+          "error": "<!DOCTYPE html><html data-dpl-id=\"dpl_FXpxT9KMM6QJJquSejAfoXtHAsTq\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm"
+        }
+      ]
+    },
+    "log-1792977797100-faoye": {
+      "id": "log-1792977797100-faoye",
+      "timestamp": 1792977797118,
+      "providerId": "google-ai-studio",
+      "providerName": "Google AI Studio",
+      "model": "gemini-2.5-pro",
+      "status": "failure",
+      "statusCode": 401,
+      "latencyMs": 18,
+      "errorMessage": "Gemini Error 401: {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"ACCESS_TOKEN_TYPE_UNSUPPORTED\",\n        \"metadata\": {\n          ",
+      "wasFallback": true,
+      "originalModelRequested": "all-models",
+      "stream": false,
+      "userAgent": "curl/7.88.1",
+      "apiKeyId": "key-prod-default",
+      "apiKeyName": "Default Production App",
+      "fallbackChain": [
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-2.5-flash",
+          "status": 401,
+          "latencyMs": 58,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"ACCESS_TOKEN_TYPE_UNSUPPORTED\",\n        \"metadata\": {\n          "
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.3-70b-versatile",
+          "status": 401,
+          "latencyMs": 99,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "meta-llama/llama-3.2-3b-instruct:free",
+          "status": 401,
+          "latencyMs": 27,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        },
+        {
+          "providerId": "xkiro",
+          "providerName": "xKiro / Kilo",
+          "modelId": "kilo-deepseek-v3",
+          "status": 404,
+          "latencyMs": 40,
+          "error": "<!DOCTYPE html><html data-dpl-id=\"dpl_FXpxT9KMM6QJJquSejAfoXtHAsTq\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm"
+        },
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-1.5-flash",
+          "status": 401,
+          "latencyMs": 18,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"ACCESS_TOKEN_TYPE_UNSUPPORTED\",\n        \"metadata\": {\n          "
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.1-8b-instant",
+          "status": 401,
+          "latencyMs": 72,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "google/gemini-2.0-flash-exp:free",
+          "status": 401,
+          "latencyMs": 15,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        },
+        {
+          "providerId": "xkiro",
+          "providerName": "xKiro / Kilo",
+          "modelId": "kilo-llama-3.3",
+          "status": 404,
+          "latencyMs": 28,
+          "error": "<!DOCTYPE html><html data-dpl-id=\"dpl_FXpxT9KMM6QJJquSejAfoXtHAsTq\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm"
+        },
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-2.5-pro",
+          "status": 401,
+          "latencyMs": 18,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"API key not valid. Please pass a valid API key.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"details\": [\n      {\n        \"@type\": \"type.googleapis.com/google.rpc.ErrorInfo\",\n        \"reason\": \"ACCESS_TOKEN_TYPE_UNSUPPORTED\",\n        \"metadata\": {\n          "
+        }
+      ]
+    },
+    "log-1792977891507-l7qg6": {
+      "id": "log-1792977891507-l7qg6",
+      "timestamp": 1792977891529,
+      "providerId": "google-ai-studio",
+      "providerName": "Google AI Studio",
+      "model": "gemini-2.5-flash",
+      "status": "failure",
+      "statusCode": 401,
+      "latencyMs": 22,
+      "errorMessage": "Gemini Error 401: {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det",
+      "wasFallback": false,
+      "originalModelRequested": "all-models",
+      "stream": false,
+      "userAgent": "curl/7.88.1",
+      "apiKeyId": "key-mvokqg2p-fq9k",
+      "apiKeyName": "Customer Mobile App",
+      "fallbackChain": [
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-2.5-flash",
+          "status": 401,
+          "latencyMs": 22,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+        }
+      ]
+    },
+    "log-1792977891530-4ipil": {
+      "id": "log-1792977891530-4ipil",
+      "timestamp": 1792977891624,
+      "providerId": "groq",
+      "providerName": "Groq Cloud",
+      "model": "llama-3.3-70b-versatile",
+      "status": "failure",
+      "statusCode": 401,
+      "latencyMs": 94,
+      "errorMessage": "Upstream error 401: {\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n",
+      "wasFallback": true,
+      "originalModelRequested": "all-models",
+      "stream": false,
+      "userAgent": "curl/7.88.1",
+      "apiKeyId": "key-mvokqg2p-fq9k",
+      "apiKeyName": "Customer Mobile App",
+      "fallbackChain": [
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-2.5-flash",
+          "status": 401,
+          "latencyMs": 22,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.3-70b-versatile",
+          "status": 401,
+          "latencyMs": 94,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        }
+      ]
+    },
+    "log-1792977891624-zv5ir": {
+      "id": "log-1792977891624-zv5ir",
+      "timestamp": 1792977891661,
+      "providerId": "openrouter",
+      "providerName": "OpenRouter",
+      "model": "meta-llama/llama-3.2-3b-instruct:free",
+      "status": "failure",
+      "statusCode": 401,
+      "latencyMs": 37,
+      "errorMessage": "Upstream error 401: {\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}",
+      "wasFallback": true,
+      "originalModelRequested": "all-models",
+      "stream": false,
+      "userAgent": "curl/7.88.1",
+      "apiKeyId": "key-mvokqg2p-fq9k",
+      "apiKeyName": "Customer Mobile App",
+      "fallbackChain": [
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-2.5-flash",
+          "status": 401,
+          "latencyMs": 22,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.3-70b-versatile",
+          "status": 401,
+          "latencyMs": 94,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "meta-llama/llama-3.2-3b-instruct:free",
+          "status": 401,
+          "latencyMs": 37,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        }
+      ]
+    },
+    "log-1792977891662-dwlxp": {
+      "id": "log-1792977891662-dwlxp",
+      "timestamp": 1792977891722,
+      "providerId": "xkiro",
+      "providerName": "xKiro / Kilo",
+      "model": "kilo-deepseek-v3",
+      "status": "failure",
+      "statusCode": 404,
+      "latencyMs": 60,
+      "errorMessage": "Upstream error 404: <!DOCTYPE html><html data-dpl-id=\"dpl_FXpxT9KMM6QJJquSejAfoXtHAsTq\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm",
+      "wasFallback": true,
+      "originalModelRequested": "all-models",
+      "stream": false,
+      "userAgent": "curl/7.88.1",
+      "apiKeyId": "key-mvokqg2p-fq9k",
+      "apiKeyName": "Customer Mobile App",
+      "fallbackChain": [
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-2.5-flash",
+          "status": 401,
+          "latencyMs": 22,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.3-70b-versatile",
+          "status": 401,
+          "latencyMs": 94,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "meta-llama/llama-3.2-3b-instruct:free",
+          "status": 401,
+          "latencyMs": 37,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        },
+        {
+          "providerId": "xkiro",
+          "providerName": "xKiro / Kilo",
+          "modelId": "kilo-deepseek-v3",
+          "status": 404,
+          "latencyMs": 60,
+          "error": "<!DOCTYPE html><html data-dpl-id=\"dpl_FXpxT9KMM6QJJquSejAfoXtHAsTq\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm"
+        }
+      ]
+    },
+    "log-1792977891722-hm3iu": {
+      "id": "log-1792977891722-hm3iu",
+      "timestamp": 1792977891733,
+      "providerId": "google-ai-studio",
+      "providerName": "Google AI Studio",
+      "model": "gemini-1.5-flash",
+      "status": "failure",
+      "statusCode": 401,
+      "latencyMs": 11,
+      "errorMessage": "Gemini Error 401: {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det",
+      "wasFallback": true,
+      "originalModelRequested": "all-models",
+      "stream": false,
+      "userAgent": "curl/7.88.1",
+      "apiKeyId": "key-mvokqg2p-fq9k",
+      "apiKeyName": "Customer Mobile App",
+      "fallbackChain": [
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-2.5-flash",
+          "status": 401,
+          "latencyMs": 22,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.3-70b-versatile",
+          "status": 401,
+          "latencyMs": 94,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "meta-llama/llama-3.2-3b-instruct:free",
+          "status": 401,
+          "latencyMs": 37,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        },
+        {
+          "providerId": "xkiro",
+          "providerName": "xKiro / Kilo",
+          "modelId": "kilo-deepseek-v3",
+          "status": 404,
+          "latencyMs": 60,
+          "error": "<!DOCTYPE html><html data-dpl-id=\"dpl_FXpxT9KMM6QJJquSejAfoXtHAsTq\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm"
+        },
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-1.5-flash",
+          "status": 401,
+          "latencyMs": 11,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+        }
+      ]
+    },
+    "log-1792977891733-blnlr": {
+      "id": "log-1792977891733-blnlr",
+      "timestamp": 1792977891797,
+      "providerId": "groq",
+      "providerName": "Groq Cloud",
+      "model": "llama-3.1-8b-instant",
+      "status": "failure",
+      "statusCode": 401,
+      "latencyMs": 64,
+      "errorMessage": "Upstream error 401: {\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n",
+      "wasFallback": true,
+      "originalModelRequested": "all-models",
+      "stream": false,
+      "userAgent": "curl/7.88.1",
+      "apiKeyId": "key-mvokqg2p-fq9k",
+      "apiKeyName": "Customer Mobile App",
+      "fallbackChain": [
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-2.5-flash",
+          "status": 401,
+          "latencyMs": 22,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.3-70b-versatile",
+          "status": 401,
+          "latencyMs": 94,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "meta-llama/llama-3.2-3b-instruct:free",
+          "status": 401,
+          "latencyMs": 37,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        },
+        {
+          "providerId": "xkiro",
+          "providerName": "xKiro / Kilo",
+          "modelId": "kilo-deepseek-v3",
+          "status": 404,
+          "latencyMs": 60,
+          "error": "<!DOCTYPE html><html data-dpl-id=\"dpl_FXpxT9KMM6QJJquSejAfoXtHAsTq\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm"
+        },
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-1.5-flash",
+          "status": 401,
+          "latencyMs": 11,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.1-8b-instant",
+          "status": 401,
+          "latencyMs": 64,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        }
+      ]
+    },
+    "log-1792977891798-e57gd": {
+      "id": "log-1792977891798-e57gd",
+      "timestamp": 1792977891811,
+      "providerId": "openrouter",
+      "providerName": "OpenRouter",
+      "model": "google/gemini-2.0-flash-exp:free",
+      "status": "failure",
+      "statusCode": 401,
+      "latencyMs": 13,
+      "errorMessage": "Upstream error 401: {\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}",
+      "wasFallback": true,
+      "originalModelRequested": "all-models",
+      "stream": false,
+      "userAgent": "curl/7.88.1",
+      "apiKeyId": "key-mvokqg2p-fq9k",
+      "apiKeyName": "Customer Mobile App",
+      "fallbackChain": [
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-2.5-flash",
+          "status": 401,
+          "latencyMs": 22,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.3-70b-versatile",
+          "status": 401,
+          "latencyMs": 94,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "meta-llama/llama-3.2-3b-instruct:free",
+          "status": 401,
+          "latencyMs": 37,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        },
+        {
+          "providerId": "xkiro",
+          "providerName": "xKiro / Kilo",
+          "modelId": "kilo-deepseek-v3",
+          "status": 404,
+          "latencyMs": 60,
+          "error": "<!DOCTYPE html><html data-dpl-id=\"dpl_FXpxT9KMM6QJJquSejAfoXtHAsTq\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm"
+        },
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-1.5-flash",
+          "status": 401,
+          "latencyMs": 11,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.1-8b-instant",
+          "status": 401,
+          "latencyMs": 64,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "google/gemini-2.0-flash-exp:free",
+          "status": 401,
+          "latencyMs": 13,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        }
+      ]
+    },
+    "log-1792977891811-roovh": {
+      "id": "log-1792977891811-roovh",
+      "timestamp": 1792977891854,
+      "providerId": "xkiro",
+      "providerName": "xKiro / Kilo",
+      "model": "kilo-llama-3.3",
+      "status": "failure",
+      "statusCode": 404,
+      "latencyMs": 43,
+      "errorMessage": "Upstream error 404: <!DOCTYPE html><html data-dpl-id=\"dpl_FXpxT9KMM6QJJquSejAfoXtHAsTq\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm",
+      "wasFallback": true,
+      "originalModelRequested": "all-models",
+      "stream": false,
+      "userAgent": "curl/7.88.1",
+      "apiKeyId": "key-mvokqg2p-fq9k",
+      "apiKeyName": "Customer Mobile App",
+      "fallbackChain": [
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-2.5-flash",
+          "status": 401,
+          "latencyMs": 22,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.3-70b-versatile",
+          "status": 401,
+          "latencyMs": 94,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "meta-llama/llama-3.2-3b-instruct:free",
+          "status": 401,
+          "latencyMs": 37,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        },
+        {
+          "providerId": "xkiro",
+          "providerName": "xKiro / Kilo",
+          "modelId": "kilo-deepseek-v3",
+          "status": 404,
+          "latencyMs": 60,
+          "error": "<!DOCTYPE html><html data-dpl-id=\"dpl_FXpxT9KMM6QJJquSejAfoXtHAsTq\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm"
+        },
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-1.5-flash",
+          "status": 401,
+          "latencyMs": 11,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.1-8b-instant",
+          "status": 401,
+          "latencyMs": 64,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "google/gemini-2.0-flash-exp:free",
+          "status": 401,
+          "latencyMs": 13,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        },
+        {
+          "providerId": "xkiro",
+          "providerName": "xKiro / Kilo",
+          "modelId": "kilo-llama-3.3",
+          "status": 404,
+          "latencyMs": 43,
+          "error": "<!DOCTYPE html><html data-dpl-id=\"dpl_FXpxT9KMM6QJJquSejAfoXtHAsTq\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm"
+        }
+      ]
+    },
+    "log-1792977891854-h095b": {
+      "id": "log-1792977891854-h095b",
+      "timestamp": 1792977891864,
+      "providerId": "google-ai-studio",
+      "providerName": "Google AI Studio",
+      "model": "gemini-2.5-pro",
+      "status": "failure",
+      "statusCode": 401,
+      "latencyMs": 10,
+      "errorMessage": "Gemini Error 401: {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det",
+      "wasFallback": true,
+      "originalModelRequested": "all-models",
+      "stream": false,
+      "userAgent": "curl/7.88.1",
+      "apiKeyId": "key-mvokqg2p-fq9k",
+      "apiKeyName": "Customer Mobile App",
+      "fallbackChain": [
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-2.5-flash",
+          "status": 401,
+          "latencyMs": 22,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.3-70b-versatile",
+          "status": 401,
+          "latencyMs": 94,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "meta-llama/llama-3.2-3b-instruct:free",
+          "status": 401,
+          "latencyMs": 37,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        },
+        {
+          "providerId": "xkiro",
+          "providerName": "xKiro / Kilo",
+          "modelId": "kilo-deepseek-v3",
+          "status": 404,
+          "latencyMs": 60,
+          "error": "<!DOCTYPE html><html data-dpl-id=\"dpl_FXpxT9KMM6QJJquSejAfoXtHAsTq\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm"
+        },
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-1.5-flash",
+          "status": 401,
+          "latencyMs": 11,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.1-8b-instant",
+          "status": 401,
+          "latencyMs": 64,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "google/gemini-2.0-flash-exp:free",
+          "status": 401,
+          "latencyMs": 13,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        },
+        {
+          "providerId": "xkiro",
+          "providerName": "xKiro / Kilo",
+          "modelId": "kilo-llama-3.3",
+          "status": 404,
+          "latencyMs": 43,
+          "error": "<!DOCTYPE html><html data-dpl-id=\"dpl_FXpxT9KMM6QJJquSejAfoXtHAsTq\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm"
+        },
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-2.5-pro",
+          "status": 401,
+          "latencyMs": 10,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+        }
+      ]
+    },
+    "log-1793030178829-zt32h": {
+      "id": "log-1793030178829-zt32h",
+      "timestamp": 1793030178946,
+      "providerId": "groq",
+      "providerName": "Groq Cloud",
+      "model": "llama-3.3-70b-versatile",
+      "status": "failure",
+      "statusCode": 401,
+      "latencyMs": 117,
+      "errorMessage": "Upstream error 401: {\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n",
+      "wasFallback": false,
+      "originalModelRequested": "all-models",
+      "stream": false,
+      "userAgent": "curl/7.88.1",
+      "apiKeyId": "master",
+      "apiKeyName": "Master Gateway Key",
+      "fallbackChain": [
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.3-70b-versatile",
+          "status": 401,
+          "latencyMs": 117,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        }
+      ],
+      "fallbackSequenceUsed": [
+        "llama-3.3-70b-versatile (failed: 401)"
+      ]
+    },
+    "log-1793030178947-8i3hw": {
+      "id": "log-1793030178947-8i3hw",
+      "timestamp": 1793030178982,
+      "providerId": "openrouter",
+      "providerName": "OpenRouter",
+      "model": "meta-llama/llama-3.2-3b-instruct:free",
+      "status": "failure",
+      "statusCode": 401,
+      "latencyMs": 35,
+      "errorMessage": "Upstream error 401: {\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}",
+      "wasFallback": true,
+      "originalModelRequested": "all-models",
+      "stream": false,
+      "userAgent": "curl/7.88.1",
+      "apiKeyId": "master",
+      "apiKeyName": "Master Gateway Key",
+      "fallbackChain": [
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.3-70b-versatile",
+          "status": 401,
+          "latencyMs": 117,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "meta-llama/llama-3.2-3b-instruct:free",
+          "status": 401,
+          "latencyMs": 35,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        }
+      ],
+      "fallbackSequenceUsed": [
+        "llama-3.3-70b-versatile (failed: 401)",
+        "meta-llama/llama-3.2-3b-instruct:free (failed: 401)"
+      ]
+    },
+    "log-1793030178982-wy2ic": {
+      "id": "log-1793030178982-wy2ic",
+      "timestamp": 1793030179042,
+      "providerId": "xkiro",
+      "providerName": "xKiro / Kilo",
+      "model": "kilo-deepseek-v3",
+      "status": "failure",
+      "statusCode": 404,
+      "latencyMs": 60,
+      "errorMessage": "Upstream error 404: <!DOCTYPE html><html data-dpl-id=\"dpl_4yB2Cd9HfbBbN8opAJxMvkoNTMqr\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm",
+      "wasFallback": true,
+      "originalModelRequested": "all-models",
+      "stream": false,
+      "userAgent": "curl/7.88.1",
+      "apiKeyId": "master",
+      "apiKeyName": "Master Gateway Key",
+      "fallbackChain": [
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.3-70b-versatile",
+          "status": 401,
+          "latencyMs": 117,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "meta-llama/llama-3.2-3b-instruct:free",
+          "status": 401,
+          "latencyMs": 35,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        },
+        {
+          "providerId": "xkiro",
+          "providerName": "xKiro / Kilo",
+          "modelId": "kilo-deepseek-v3",
+          "status": 404,
+          "latencyMs": 60,
+          "error": "<!DOCTYPE html><html data-dpl-id=\"dpl_4yB2Cd9HfbBbN8opAJxMvkoNTMqr\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm"
+        }
+      ],
+      "fallbackSequenceUsed": [
+        "llama-3.3-70b-versatile (failed: 401)",
+        "meta-llama/llama-3.2-3b-instruct:free (failed: 401)",
+        "kilo-deepseek-v3 (failed: 404)"
+      ]
+    },
+    "log-1793030179042-d1oau": {
+      "id": "log-1793030179042-d1oau",
+      "timestamp": 1793030179069,
+      "providerId": "google-ai-studio",
+      "providerName": "Google AI Studio",
+      "model": "gemini-2.5-flash",
+      "status": "failure",
+      "statusCode": 401,
+      "latencyMs": 27,
+      "errorMessage": "Gemini Error 401: {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det",
+      "wasFallback": true,
+      "originalModelRequested": "all-models",
+      "stream": false,
+      "userAgent": "curl/7.88.1",
+      "apiKeyId": "master",
+      "apiKeyName": "Master Gateway Key",
+      "fallbackChain": [
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.3-70b-versatile",
+          "status": 401,
+          "latencyMs": 117,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "meta-llama/llama-3.2-3b-instruct:free",
+          "status": 401,
+          "latencyMs": 35,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        },
+        {
+          "providerId": "xkiro",
+          "providerName": "xKiro / Kilo",
+          "modelId": "kilo-deepseek-v3",
+          "status": 404,
+          "latencyMs": 60,
+          "error": "<!DOCTYPE html><html data-dpl-id=\"dpl_4yB2Cd9HfbBbN8opAJxMvkoNTMqr\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm"
+        },
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-2.5-flash",
+          "status": 401,
+          "latencyMs": 27,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+        }
+      ],
+      "fallbackSequenceUsed": [
+        "llama-3.3-70b-versatile (failed: 401)",
+        "meta-llama/llama-3.2-3b-instruct:free (failed: 401)",
+        "kilo-deepseek-v3 (failed: 404)",
+        "gemini-2.5-flash (failed: 401)"
+      ]
+    },
+    "log-1793030179069-uufr8": {
+      "id": "log-1793030179069-uufr8",
+      "timestamp": 1793030179081,
+      "providerId": "google-ai-studio",
+      "providerName": "Google AI Studio",
+      "model": "gemini-1.5-flash",
+      "status": "failure",
+      "statusCode": 401,
+      "latencyMs": 12,
+      "errorMessage": "Gemini Error 401: {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det",
+      "wasFallback": true,
+      "originalModelRequested": "all-models",
+      "stream": false,
+      "userAgent": "curl/7.88.1",
+      "apiKeyId": "master",
+      "apiKeyName": "Master Gateway Key",
+      "fallbackChain": [
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.3-70b-versatile",
+          "status": 401,
+          "latencyMs": 117,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "meta-llama/llama-3.2-3b-instruct:free",
+          "status": 401,
+          "latencyMs": 35,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        },
+        {
+          "providerId": "xkiro",
+          "providerName": "xKiro / Kilo",
+          "modelId": "kilo-deepseek-v3",
+          "status": 404,
+          "latencyMs": 60,
+          "error": "<!DOCTYPE html><html data-dpl-id=\"dpl_4yB2Cd9HfbBbN8opAJxMvkoNTMqr\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm"
+        },
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-2.5-flash",
+          "status": 401,
+          "latencyMs": 27,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+        },
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-1.5-flash",
+          "status": 401,
+          "latencyMs": 12,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+        }
+      ],
+      "fallbackSequenceUsed": [
+        "llama-3.3-70b-versatile (failed: 401)",
+        "meta-llama/llama-3.2-3b-instruct:free (failed: 401)",
+        "kilo-deepseek-v3 (failed: 404)",
+        "gemini-2.5-flash (failed: 401)",
+        "gemini-1.5-flash (failed: 401)"
+      ]
+    },
+    "log-1793030179081-f688m": {
+      "id": "log-1793030179081-f688m",
+      "timestamp": 1793030179226,
+      "providerId": "groq",
+      "providerName": "Groq Cloud",
+      "model": "llama-3.1-8b-instant",
+      "status": "failure",
+      "statusCode": 401,
+      "latencyMs": 145,
+      "errorMessage": "Upstream error 401: {\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n",
+      "wasFallback": true,
+      "originalModelRequested": "all-models",
+      "stream": false,
+      "userAgent": "curl/7.88.1",
+      "apiKeyId": "master",
+      "apiKeyName": "Master Gateway Key",
+      "fallbackChain": [
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.3-70b-versatile",
+          "status": 401,
+          "latencyMs": 117,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "meta-llama/llama-3.2-3b-instruct:free",
+          "status": 401,
+          "latencyMs": 35,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        },
+        {
+          "providerId": "xkiro",
+          "providerName": "xKiro / Kilo",
+          "modelId": "kilo-deepseek-v3",
+          "status": 404,
+          "latencyMs": 60,
+          "error": "<!DOCTYPE html><html data-dpl-id=\"dpl_4yB2Cd9HfbBbN8opAJxMvkoNTMqr\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm"
+        },
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-2.5-flash",
+          "status": 401,
+          "latencyMs": 27,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+        },
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-1.5-flash",
+          "status": 401,
+          "latencyMs": 12,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.1-8b-instant",
+          "status": 401,
+          "latencyMs": 145,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        }
+      ],
+      "fallbackSequenceUsed": [
+        "llama-3.3-70b-versatile (failed: 401)",
+        "meta-llama/llama-3.2-3b-instruct:free (failed: 401)",
+        "kilo-deepseek-v3 (failed: 404)",
+        "gemini-2.5-flash (failed: 401)",
+        "gemini-1.5-flash (failed: 401)",
+        "llama-3.1-8b-instant (failed: 401)"
+      ]
+    },
+    "log-1793030179226-8lage": {
+      "id": "log-1793030179226-8lage",
+      "timestamp": 1793030179239,
+      "providerId": "openrouter",
+      "providerName": "OpenRouter",
+      "model": "google/gemini-2.0-flash-exp:free",
+      "status": "failure",
+      "statusCode": 401,
+      "latencyMs": 13,
+      "errorMessage": "Upstream error 401: {\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}",
+      "wasFallback": true,
+      "originalModelRequested": "all-models",
+      "stream": false,
+      "userAgent": "curl/7.88.1",
+      "apiKeyId": "master",
+      "apiKeyName": "Master Gateway Key",
+      "fallbackChain": [
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.3-70b-versatile",
+          "status": 401,
+          "latencyMs": 117,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "meta-llama/llama-3.2-3b-instruct:free",
+          "status": 401,
+          "latencyMs": 35,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        },
+        {
+          "providerId": "xkiro",
+          "providerName": "xKiro / Kilo",
+          "modelId": "kilo-deepseek-v3",
+          "status": 404,
+          "latencyMs": 60,
+          "error": "<!DOCTYPE html><html data-dpl-id=\"dpl_4yB2Cd9HfbBbN8opAJxMvkoNTMqr\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm"
+        },
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-2.5-flash",
+          "status": 401,
+          "latencyMs": 27,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+        },
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-1.5-flash",
+          "status": 401,
+          "latencyMs": 12,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.1-8b-instant",
+          "status": 401,
+          "latencyMs": 145,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "google/gemini-2.0-flash-exp:free",
+          "status": 401,
+          "latencyMs": 13,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        }
+      ],
+      "fallbackSequenceUsed": [
+        "llama-3.3-70b-versatile (failed: 401)",
+        "meta-llama/llama-3.2-3b-instruct:free (failed: 401)",
+        "kilo-deepseek-v3 (failed: 404)",
+        "gemini-2.5-flash (failed: 401)",
+        "gemini-1.5-flash (failed: 401)",
+        "llama-3.1-8b-instant (failed: 401)",
+        "google/gemini-2.0-flash-exp:free (failed: 401)"
+      ]
+    },
+    "log-1793030179240-mwv0w": {
+      "id": "log-1793030179240-mwv0w",
+      "timestamp": 1793030179338,
+      "providerId": "xkiro",
+      "providerName": "xKiro / Kilo",
+      "model": "kilo-llama-3.3",
+      "status": "failure",
+      "statusCode": 404,
+      "latencyMs": 98,
+      "errorMessage": "Upstream error 404: <!DOCTYPE html><html data-dpl-id=\"dpl_4yB2Cd9HfbBbN8opAJxMvkoNTMqr\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm",
+      "wasFallback": true,
+      "originalModelRequested": "all-models",
+      "stream": false,
+      "userAgent": "curl/7.88.1",
+      "apiKeyId": "master",
+      "apiKeyName": "Master Gateway Key",
+      "fallbackChain": [
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.3-70b-versatile",
+          "status": 401,
+          "latencyMs": 117,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "meta-llama/llama-3.2-3b-instruct:free",
+          "status": 401,
+          "latencyMs": 35,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        },
+        {
+          "providerId": "xkiro",
+          "providerName": "xKiro / Kilo",
+          "modelId": "kilo-deepseek-v3",
+          "status": 404,
+          "latencyMs": 60,
+          "error": "<!DOCTYPE html><html data-dpl-id=\"dpl_4yB2Cd9HfbBbN8opAJxMvkoNTMqr\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm"
+        },
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-2.5-flash",
+          "status": 401,
+          "latencyMs": 27,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+        },
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-1.5-flash",
+          "status": 401,
+          "latencyMs": 12,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.1-8b-instant",
+          "status": 401,
+          "latencyMs": 145,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "google/gemini-2.0-flash-exp:free",
+          "status": 401,
+          "latencyMs": 13,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        },
+        {
+          "providerId": "xkiro",
+          "providerName": "xKiro / Kilo",
+          "modelId": "kilo-llama-3.3",
+          "status": 404,
+          "latencyMs": 98,
+          "error": "<!DOCTYPE html><html data-dpl-id=\"dpl_4yB2Cd9HfbBbN8opAJxMvkoNTMqr\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm"
+        }
+      ],
+      "fallbackSequenceUsed": [
+        "llama-3.3-70b-versatile (failed: 401)",
+        "meta-llama/llama-3.2-3b-instruct:free (failed: 401)",
+        "kilo-deepseek-v3 (failed: 404)",
+        "gemini-2.5-flash (failed: 401)",
+        "gemini-1.5-flash (failed: 401)",
+        "llama-3.1-8b-instant (failed: 401)",
+        "google/gemini-2.0-flash-exp:free (failed: 401)",
+        "kilo-llama-3.3 (failed: 404)"
+      ]
+    },
+    "log-1793030179339-gpnxu": {
+      "id": "log-1793030179339-gpnxu",
+      "timestamp": 1793030179350,
+      "providerId": "google-ai-studio",
+      "providerName": "Google AI Studio",
+      "model": "gemini-2.5-pro",
+      "status": "failure",
+      "statusCode": 401,
+      "latencyMs": 11,
+      "errorMessage": "Gemini Error 401: {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det",
+      "wasFallback": true,
+      "originalModelRequested": "all-models",
+      "stream": false,
+      "userAgent": "curl/7.88.1",
+      "apiKeyId": "master",
+      "apiKeyName": "Master Gateway Key",
+      "fallbackChain": [
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.3-70b-versatile",
+          "status": 401,
+          "latencyMs": 117,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "meta-llama/llama-3.2-3b-instruct:free",
+          "status": 401,
+          "latencyMs": 35,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        },
+        {
+          "providerId": "xkiro",
+          "providerName": "xKiro / Kilo",
+          "modelId": "kilo-deepseek-v3",
+          "status": 404,
+          "latencyMs": 60,
+          "error": "<!DOCTYPE html><html data-dpl-id=\"dpl_4yB2Cd9HfbBbN8opAJxMvkoNTMqr\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm"
+        },
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-2.5-flash",
+          "status": 401,
+          "latencyMs": 27,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+        },
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-1.5-flash",
+          "status": 401,
+          "latencyMs": 12,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.1-8b-instant",
+          "status": 401,
+          "latencyMs": 145,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "google/gemini-2.0-flash-exp:free",
+          "status": 401,
+          "latencyMs": 13,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        },
+        {
+          "providerId": "xkiro",
+          "providerName": "xKiro / Kilo",
+          "modelId": "kilo-llama-3.3",
+          "status": 404,
+          "latencyMs": 98,
+          "error": "<!DOCTYPE html><html data-dpl-id=\"dpl_4yB2Cd9HfbBbN8opAJxMvkoNTMqr\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm"
+        },
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-2.5-pro",
+          "status": 401,
+          "latencyMs": 11,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+        }
+      ],
+      "fallbackSequenceUsed": [
+        "llama-3.3-70b-versatile (failed: 401)",
+        "meta-llama/llama-3.2-3b-instruct:free (failed: 401)",
+        "kilo-deepseek-v3 (failed: 404)",
+        "gemini-2.5-flash (failed: 401)",
+        "gemini-1.5-flash (failed: 401)",
+        "llama-3.1-8b-instant (failed: 401)",
+        "google/gemini-2.0-flash-exp:free (failed: 401)",
+        "kilo-llama-3.3 (failed: 404)",
+        "gemini-2.5-pro (failed: 401)"
+      ]
+    },
+    "log-1793187502323-hyyf1": {
+      "id": "log-1793187502323-hyyf1",
+      "timestamp": 1793187502626,
+      "providerId": "google-ai-studio",
+      "providerName": "Google AI Studio",
+      "model": "gemini-3.1-flash-lite",
+      "status": "failure",
+      "statusCode": 401,
+      "latencyMs": 303,
+      "errorMessage": "Gemini Error 401: {\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det",
+      "wasFallback": false,
+      "originalModelRequested": "gemini-3.1-flash-lite",
+      "stream": true,
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:159.0) Gecko/20100101 Firefox/159.0",
+      "apiKeyId": "master",
+      "apiKeyName": "Master Gateway Key",
+      "fallbackChain": [
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-3.1-flash-lite",
+          "status": 401,
+          "latencyMs": 303,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+        }
+      ],
+      "fallbackSequenceUsed": [
+        "gemini-3.1-flash-lite (failed: 401)"
+      ]
+    },
+    "log-1793187502629-lm22v": {
+      "id": "log-1793187502629-lm22v",
+      "timestamp": 1793187502786,
+      "providerId": "groq",
+      "providerName": "Groq Cloud",
+      "model": "llama-3.3-70b-versatile",
+      "status": "failure",
+      "statusCode": 401,
+      "latencyMs": 157,
+      "errorMessage": "Upstream error 401: {\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n",
+      "wasFallback": true,
+      "originalModelRequested": "gemini-3.1-flash-lite",
+      "stream": true,
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:159.0) Gecko/20100101 Firefox/159.0",
+      "apiKeyId": "master",
+      "apiKeyName": "Master Gateway Key",
+      "fallbackChain": [
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-3.1-flash-lite",
+          "status": 401,
+          "latencyMs": 303,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.3-70b-versatile",
+          "status": 401,
+          "latencyMs": 157,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        }
+      ],
+      "fallbackSequenceUsed": [
+        "gemini-3.1-flash-lite (failed: 401)",
+        "llama-3.3-70b-versatile (failed: 401)"
+      ]
+    },
+    "log-1793187502789-8ms0f": {
+      "id": "log-1793187502789-8ms0f",
+      "timestamp": 1793187502879,
+      "providerId": "openrouter",
+      "providerName": "OpenRouter",
+      "model": "meta-llama/llama-3.2-3b-instruct:free",
+      "status": "failure",
+      "statusCode": 401,
+      "latencyMs": 90,
+      "errorMessage": "Upstream error 401: {\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}",
+      "wasFallback": true,
+      "originalModelRequested": "gemini-3.1-flash-lite",
+      "stream": true,
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:159.0) Gecko/20100101 Firefox/159.0",
+      "apiKeyId": "master",
+      "apiKeyName": "Master Gateway Key",
+      "fallbackChain": [
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-3.1-flash-lite",
+          "status": 401,
+          "latencyMs": 303,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.3-70b-versatile",
+          "status": 401,
+          "latencyMs": 157,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "meta-llama/llama-3.2-3b-instruct:free",
+          "status": 401,
+          "latencyMs": 90,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        }
+      ],
+      "fallbackSequenceUsed": [
+        "gemini-3.1-flash-lite (failed: 401)",
+        "llama-3.3-70b-versatile (failed: 401)",
+        "meta-llama/llama-3.2-3b-instruct:free (failed: 401)"
+      ]
+    },
+    "log-1793187502880-psxfn": {
+      "id": "log-1793187502880-psxfn",
+      "timestamp": 1793187503102,
+      "providerId": "xkiro",
+      "providerName": "xKiro / Kilo",
+      "model": "kilo-deepseek-v3",
+      "status": "failure",
+      "statusCode": 404,
+      "latencyMs": 222,
+      "errorMessage": "Upstream error 404: <!DOCTYPE html><html data-dpl-id=\"dpl_A7L93y9pHWLdt99n51mhESqjeQpU\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm",
+      "wasFallback": true,
+      "originalModelRequested": "gemini-3.1-flash-lite",
+      "stream": true,
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:159.0) Gecko/20100101 Firefox/159.0",
+      "apiKeyId": "master",
+      "apiKeyName": "Master Gateway Key",
+      "fallbackChain": [
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-3.1-flash-lite",
+          "status": 401,
+          "latencyMs": 303,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.3-70b-versatile",
+          "status": 401,
+          "latencyMs": 157,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "meta-llama/llama-3.2-3b-instruct:free",
+          "status": 401,
+          "latencyMs": 90,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        },
+        {
+          "providerId": "xkiro",
+          "providerName": "xKiro / Kilo",
+          "modelId": "kilo-deepseek-v3",
+          "status": 404,
+          "latencyMs": 222,
+          "error": "<!DOCTYPE html><html data-dpl-id=\"dpl_A7L93y9pHWLdt99n51mhESqjeQpU\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm"
+        }
+      ],
+      "fallbackSequenceUsed": [
+        "gemini-3.1-flash-lite (failed: 401)",
+        "llama-3.3-70b-versatile (failed: 401)",
+        "meta-llama/llama-3.2-3b-instruct:free (failed: 401)",
+        "kilo-deepseek-v3 (failed: 404)"
+      ]
+    },
+    "log-1793187503104-f44yk": {
+      "id": "log-1793187503104-f44yk",
+      "timestamp": 1793187503161,
+      "providerId": "groq",
+      "providerName": "Groq Cloud",
+      "model": "llama-3.1-8b-instant",
+      "status": "failure",
+      "statusCode": 401,
+      "latencyMs": 57,
+      "errorMessage": "Upstream error 401: {\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n",
+      "wasFallback": true,
+      "originalModelRequested": "gemini-3.1-flash-lite",
+      "stream": true,
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:159.0) Gecko/20100101 Firefox/159.0",
+      "apiKeyId": "master",
+      "apiKeyName": "Master Gateway Key",
+      "fallbackChain": [
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-3.1-flash-lite",
+          "status": 401,
+          "latencyMs": 303,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.3-70b-versatile",
+          "status": 401,
+          "latencyMs": 157,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "meta-llama/llama-3.2-3b-instruct:free",
+          "status": 401,
+          "latencyMs": 90,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        },
+        {
+          "providerId": "xkiro",
+          "providerName": "xKiro / Kilo",
+          "modelId": "kilo-deepseek-v3",
+          "status": 404,
+          "latencyMs": 222,
+          "error": "<!DOCTYPE html><html data-dpl-id=\"dpl_A7L93y9pHWLdt99n51mhESqjeQpU\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm"
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.1-8b-instant",
+          "status": 401,
+          "latencyMs": 57,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        }
+      ],
+      "fallbackSequenceUsed": [
+        "gemini-3.1-flash-lite (failed: 401)",
+        "llama-3.3-70b-versatile (failed: 401)",
+        "meta-llama/llama-3.2-3b-instruct:free (failed: 401)",
+        "kilo-deepseek-v3 (failed: 404)",
+        "llama-3.1-8b-instant (failed: 401)"
+      ]
+    },
+    "log-1793187503162-cl7gr": {
+      "id": "log-1793187503162-cl7gr",
+      "timestamp": 1793187503184,
+      "providerId": "openrouter",
+      "providerName": "OpenRouter",
+      "model": "google/gemini-2.0-flash-exp:free",
+      "status": "failure",
+      "statusCode": 401,
+      "latencyMs": 22,
+      "errorMessage": "Upstream error 401: {\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}",
+      "wasFallback": true,
+      "originalModelRequested": "gemini-3.1-flash-lite",
+      "stream": true,
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:159.0) Gecko/20100101 Firefox/159.0",
+      "apiKeyId": "master",
+      "apiKeyName": "Master Gateway Key",
+      "fallbackChain": [
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-3.1-flash-lite",
+          "status": 401,
+          "latencyMs": 303,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.3-70b-versatile",
+          "status": 401,
+          "latencyMs": 157,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "meta-llama/llama-3.2-3b-instruct:free",
+          "status": 401,
+          "latencyMs": 90,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        },
+        {
+          "providerId": "xkiro",
+          "providerName": "xKiro / Kilo",
+          "modelId": "kilo-deepseek-v3",
+          "status": 404,
+          "latencyMs": 222,
+          "error": "<!DOCTYPE html><html data-dpl-id=\"dpl_A7L93y9pHWLdt99n51mhESqjeQpU\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm"
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.1-8b-instant",
+          "status": 401,
+          "latencyMs": 57,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "google/gemini-2.0-flash-exp:free",
+          "status": 401,
+          "latencyMs": 22,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        }
+      ],
+      "fallbackSequenceUsed": [
+        "gemini-3.1-flash-lite (failed: 401)",
+        "llama-3.3-70b-versatile (failed: 401)",
+        "meta-llama/llama-3.2-3b-instruct:free (failed: 401)",
+        "kilo-deepseek-v3 (failed: 404)",
+        "llama-3.1-8b-instant (failed: 401)",
+        "google/gemini-2.0-flash-exp:free (failed: 401)"
+      ]
+    },
+    "log-1793187503186-r3j15": {
+      "id": "log-1793187503186-r3j15",
+      "timestamp": 1793187503257,
+      "providerId": "xkiro",
+      "providerName": "xKiro / Kilo",
+      "model": "kilo-llama-3.3",
+      "status": "failure",
+      "statusCode": 404,
+      "latencyMs": 71,
+      "errorMessage": "Upstream error 404: <!DOCTYPE html><html data-dpl-id=\"dpl_A7L93y9pHWLdt99n51mhESqjeQpU\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm",
+      "wasFallback": true,
+      "originalModelRequested": "gemini-3.1-flash-lite",
+      "stream": true,
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:159.0) Gecko/20100101 Firefox/159.0",
+      "apiKeyId": "master",
+      "apiKeyName": "Master Gateway Key",
+      "fallbackChain": [
+        {
+          "providerId": "google-ai-studio",
+          "providerName": "Google AI Studio",
+          "modelId": "gemini-3.1-flash-lite",
+          "status": 401,
+          "latencyMs": 303,
+          "error": "{\n  \"error\": {\n    \"code\": 401,\n    \"message\": \"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.\",\n    \"status\": \"UNAUTHENTICATED\",\n    \"det"
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.3-70b-versatile",
+          "status": 401,
+          "latencyMs": 157,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "meta-llama/llama-3.2-3b-instruct:free",
+          "status": 401,
+          "latencyMs": 90,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        },
+        {
+          "providerId": "xkiro",
+          "providerName": "xKiro / Kilo",
+          "modelId": "kilo-deepseek-v3",
+          "status": 404,
+          "latencyMs": 222,
+          "error": "<!DOCTYPE html><html data-dpl-id=\"dpl_A7L93y9pHWLdt99n51mhESqjeQpU\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm"
+        },
+        {
+          "providerId": "groq",
+          "providerName": "Groq Cloud",
+          "modelId": "llama-3.1-8b-instant",
+          "status": 401,
+          "latencyMs": 57,
+          "error": "{\"error\":{\"message\":\"Invalid API Key\",\"type\":\"invalid_request_error\",\"code\":\"invalid_api_key\"}}\n"
+        },
+        {
+          "providerId": "openrouter",
+          "providerName": "OpenRouter",
+          "modelId": "google/gemini-2.0-flash-exp:free",
+          "status": 401,
+          "latencyMs": 22,
+          "error": "{\"error\":{\"message\":\"Missing Authentication header\",\"code\":401}}"
+        },
+        {
+          "providerId": "xkiro",
+          "providerName": "xKiro / Kilo",
+          "modelId": "kilo-llama-3.3",
+          "status": 404,
+          "latencyMs": 71,
+          "error": "<!DOCTYPE html><html data-dpl-id=\"dpl_A7L93y9pHWLdt99n51mhESqjeQpU\" lang=\"en\" class=\"DPFDPW_variable HJOgBW_variable UHGtKW_variable font-sans antialiased\"><head><meta charSet=\"utf-8\"/><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"/><link rel=\"stylesheet\" href=\"/_next/static/imm"
+        }
+      ],
+      "fallbackSequenceUsed": [
+        "gemini-3.1-flash-lite (failed: 401)",
+        "llama-3.3-70b-versatile (failed: 401)",
+        "meta-llama/llama-3.2-3b-instruct:free (failed: 401)",
+        "kilo-deepseek-v3 (failed: 404)",
+        "llama-3.1-8b-instant (failed: 401)",
+        "google/gemini-2.0-flash-exp:free (failed: 401)",
+        "kilo-llama-3.3 (failed: 404)"
+      ]
+    }
+  }
+}
