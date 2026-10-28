@@ -1,0 +1,6 @@
+{
+  "name": "Unified AI Gateway & Multi-Provider Dashboard",
+  "description": "Zero-file-edit Unified Multi-Provider AI Gateway with dynamic Firebase routing, OpenAI compatibility, Gemini adapter, auto-fallback, and live metrics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

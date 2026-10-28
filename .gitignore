@@ -1,0 +1,11 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# Gateway runtime data — contains API keys in plain text, never commit!
+data/gateway-data.json

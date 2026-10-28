@@ -1,0 +1,189 @@
+{
+  "settings": {
+    "masterApiKey": "gw-sk-master-live-2026",
+    "cacheTtlSeconds": 60,
+    "fallbackEnabled": true,
+    "maxRetries": 3,
+    "requestTimeoutMs": 30000,
+    "firebaseUrl": "",
+    "firebaseSecret": ""
+  },
+  "providers": {
+    "google-ai-studio": {
+      "id": "google-ai-studio",
+      "name": "Google AI Studio",
+      "enabled": true,
+      "protocol": "gemini-native",
+      "baseUrl": "https://generativelanguage.googleapis.com/v1beta",
+      "apiKey": "",
+      "customHeaders": {},
+      "createdAt": 1729584000000,
+      "updatedAt": 1729584000000,
+      "models": [
+        {
+          "id": "gemini-2.5-flash",
+          "name": "Gemini 2.5 Flash (Ultra-fast & multimodal)",
+          "enabled": true,
+          "priority": 1,
+          "contextWindow": 1048576,
+          "notes": "Primary recommended default model"
+        },
+        {
+          "id": "gemini-1.5-flash",
+          "name": "Gemini 1.5 Flash (High speed, 1M context)",
+          "enabled": true,
+          "priority": 2,
+          "contextWindow": 1048576,
+          "notes": "High availability secondary fallback"
+        },
+        {
+          "id": "gemini-2.5-pro",
+          "name": "Gemini 2.5 Pro (Deep reasoning)",
+          "enabled": true,
+          "priority": 3,
+          "contextWindow": 2097152,
+          "notes": "Complex reasoning tasks"
+        }
+      ]
+    },
+    "groq": {
+      "id": "groq",
+      "name": "Groq Cloud (LPU Engine)",
+      "enabled": true,
+      "protocol": "openai-compatible",
+      "baseUrl": "https://api.groq.com/openai/v1",
+      "apiKey": "",
+      "customHeaders": {},
+      "createdAt": 1729584000000,
+      "updatedAt": 1729584000000,
+      "models": [
+        {
+          "id": "llama-3.3-70b-versatile",
+          "name": "Llama 3.3 70B Versatile",
+          "enabled": true,
+          "priority": 1,
+          "contextWindow": 128000,
+          "notes": "Groq ultra-low latency inference"
+        },
+        {
+          "id": "llama-3.1-8b-instant",
+          "name": "Llama 3.1 8B Instant",
+          "enabled": true,
+          "priority": 2,
+          "contextWindow": 128000,
+          "notes": "Instant speed fallback"
+        },
+        {
+          "id": "mixtral-8x7b-32768",
+          "name": "Mixtral 8x7B 32k",
+          "enabled": true,
+          "priority": 3,
+          "contextWindow": 32768,
+          "notes": "High throughput MoE model"
+        }
+      ]
+    },
+    "openrouter": {
+      "id": "openrouter",
+      "name": "OpenRouter",
+      "enabled": true,
+      "protocol": "openai-compatible",
+      "baseUrl": "https://openrouter.ai/api/v1",
+      "apiKey": "",
+      "customHeaders": {
+        "HTTP-Referer": "https://gateway.ai",
+        "X-Title": "Unified AI Gateway"
+      },
+      "createdAt": 1729584000000,
+      "updatedAt": 1729584000000,
+      "models": [
+        {
+          "id": "meta-llama/llama-3.2-3b-instruct:free",
+          "name": "Llama 3.2 3B Instruct (Free Tier)",
+          "enabled": true,
+          "priority": 1,
+          "contextWindow": 131072,
+          "notes": "Zero-cost fallback on rate limits"
+        },
+        {
+          "id": "google/gemini-2.0-flash-exp:free",
+          "name": "Gemini 2.0 Flash Exp (Free Tier)",
+          "enabled": true,
+          "priority": 2,
+          "contextWindow": 1048576,
+          "notes": "Free tier experimental model"
+        }
+      ]
+    },
+    "xkiro": {
+      "id": "xkiro",
+      "name": "xKiro / Kilo Gateway",
+      "enabled": true,
+      "protocol": "openai-compatible",
+      "baseUrl": "https://api.kilo.ai/v1",
+      "apiKey": "",
+      "customHeaders": {},
+      "createdAt": 1729584000000,
+      "updatedAt": 1729584000000,
+      "models": [
+        {
+          "id": "kilo-deepseek-v3",
+          "name": "DeepSeek V3 (Kilo)",
+          "enabled": true,
+          "priority": 1,
+          "contextWindow": 64000,
+          "notes": "Cost-effective frontier model"
+        },
+        {
+          "id": "kilo-llama-3.3",
+          "name": "Llama 3.3 (Kilo)",
+          "enabled": true,
+          "priority": 2,
+          "contextWindow": 128000,
+          "notes": "Secondary fallback option"
+        }
+      ]
+    }
+  },
+  "clientKeys": {
+    "key-prod-default": {
+      "id": "key-prod-default",
+      "name": "Default Production App",
+      "key": "gw-client-prod-9a7c",
+      "enabled": true,
+      "createdAt": 1729584000000,
+      "totalRequests": 0,
+      "totalPromptTokens": 0,
+      "totalCompletionTokens": 0,
+      "totalTokens": 0
+    },
+    "key-dev-sandbox": {
+      "id": "key-dev-sandbox",
+      "name": "Staging & Sandbox Key",
+      "key": "gw-client-dev-4f81",
+      "enabled": true,
+      "createdAt": 1729584000000,
+      "totalRequests": 0,
+      "totalPromptTokens": 0,
+      "totalCompletionTokens": 0,
+      "totalTokens": 0
+    }
+  },
+  "logs": {
+    "init-log-01": {
+      "id": "init-log-01",
+      "timestamp": 1729584000000,
+      "providerId": "google-ai-studio",
+      "providerName": "Google AI Studio",
+      "model": "gemini-2.5-flash",
+      "status": "success",
+      "statusCode": 200,
+      "latencyMs": 412,
+      "wasFallback": false,
+      "stream": false,
+      "promptTokens": 18,
+      "completionTokens": 45,
+      "totalTokens": 63
+    }
+  }
+}
